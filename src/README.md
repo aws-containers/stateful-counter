@@ -39,11 +39,6 @@ docker run -it --rm \
 
 To develop the application outside of a container you can
 
-```
-pipenv install
-pipenv shell
-```
-
 Create a database
 
 ```
@@ -55,10 +50,16 @@ docker run -d --name postgres \
     postgres
 ```
 
+```
+pipenv install
+pipenv shell
+```
+
 Source the environment file
 
 ```
 source .env
+DB_HOST=localhost
 ```
 
 Run the application
